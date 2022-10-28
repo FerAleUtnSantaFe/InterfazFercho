@@ -1,0 +1,194 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 268435456 bytes for Failed to commit area from 0x0000000700c00000 to 0x0000000710c00000 of length 268435456.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./src/hotspot/os/windows/os_windows.cpp:3387), pid=11372, tid=14232
+#
+# JRE version:  (11.0.14.1+1) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.14.1+1, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: --module-path=F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib --add-modules=javafx.controls,javafx.fxml -Dfile.encoding=Cp1252 --module-path=F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx.base.jar;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx.controls.jar;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx.fxml.jar;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx.graphics.jar;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx.media.jar;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx.swing.jar;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx.web.jar;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx-swt.jar Interfaz.Main
+
+Host: AMD Ryzen 5 2600 Six-Core Processor            , 12 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1889)
+Time: Fri Oct 28 16:10:35 2022 Hora estándar de Argentina elapsed time: 0.009342 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000024c9067b000):  JavaThread "Unknown thread" [_thread_in_vm, id=14232, stack(0x000000da5da00000,0x000000da5db00000)]
+
+Stack: [0x000000da5da00000,0x000000da5db00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x61e59a]
+V  [jvm.dll+0x7aaca9]
+V  [jvm.dll+0x7ac398]
+V  [jvm.dll+0x7aca73]
+V  [jvm.dll+0x24f9b8]
+V  [jvm.dll+0x61b83a]
+V  [jvm.dll+0x6100c5]
+V  [jvm.dll+0x30772c]
+V  [jvm.dll+0x3075b2]
+V  [jvm.dll+0x30c2d6]
+V  [jvm.dll+0x35272f]
+V  [jvm.dll+0x352160]
+V  [jvm.dll+0x2e4728]
+V  [jvm.dll+0x2e5886]
+V  [jvm.dll+0x784b07]
+V  [jvm.dll+0x78628f]
+V  [jvm.dll+0x35f479]
+V  [jvm.dll+0x767aa0]
+V  [jvm.dll+0x3ccf1f]
+V  [jvm.dll+0x3cf2b1]
+C  [jli.dll+0x5207]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x526a1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x0000024c8ec43a40, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000024c90693000 GCTaskThread "GC Thread#0" [stack: 0x000000da5db00000,0x000000da5dc00000] [id=14532]
+  0x0000024c906f3800 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000da5dc00000,0x000000da5dd00000] [id=16168]
+  0x0000024c906f5800 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000da5dd00000,0x000000da5de00000] [id=19072]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffc5c773ef7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000024c906785d0] Heap_lock - owner thread: 0x0000024c9067b000
+
+Heap address: 0x0000000700c00000, size: 4084 MB, Compressed Oops mode: Non-zero based: 0x0000000700c00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (1 events):
+Event: 0.006 Loaded shared library C:\Program Files\Eclipse Adoptium\jdk-11.0.14.101-hotspot\bin\zip.dll
+
+
+Dynamic libraries:
+0x00007ff7748d0000 - 0x00007ff7748dd000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.14.101-hotspot\bin\javaw.exe
+0x00007ffcc8b50000 - 0x00007ffcc8d48000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffcc6bb0000 - 0x00007ffcc6c6d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffcc6300000 - 0x00007ffcc65d2000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffcc6710000 - 0x00007ffcc6810000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffcc1d80000 - 0x00007ffcc1d95000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.14.101-hotspot\bin\VCRUNTIME140.dll
+0x00007ffcc1d60000 - 0x00007ffcc1d77000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.14.101-hotspot\bin\jli.dll
+0x00007ffcc6ed0000 - 0x00007ffcc706d000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffcc6260000 - 0x00007ffcc6282000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffcba250000 - 0x00007ffcba4ea000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ffcc6c70000 - 0x00007ffcc6c9b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffcc8870000 - 0x00007ffcc890e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffcc6a10000 - 0x00007ffcc6b1f000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffcc6810000 - 0x00007ffcc68ad000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffcc8540000 - 0x00007ffcc8570000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffcaf2c0000 - 0x00007ffcaf35b000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.14.101-hotspot\bin\msvcp140.dll
+0x00007ffc5c480000 - 0x00007ffc5d001000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.14.101-hotspot\bin\server\jvm.dll
+0x00007ffcc8320000 - 0x00007ffcc83ce000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffcc6d00000 - 0x00007ffcc6d9c000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffcc6da0000 - 0x00007ffcc6ec5000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffcc7860000 - 0x00007ffcc7868000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffcb4910000 - 0x00007ffcb4919000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffcbdcc0000 - 0x00007ffcbdce7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffcbf070000 - 0x00007ffcbf07a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffcc7790000 - 0x00007ffcc77fb000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffcc4140000 - 0x00007ffcc4152000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffcb7000000 - 0x00007ffcb7010000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.14.101-hotspot\bin\verify.dll
+0x00007ffcbf770000 - 0x00007ffcbf954000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffcb8e80000 - 0x00007ffcb8eac000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffcc6b20000 - 0x00007ffcc6ba2000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffcaa570000 - 0x00007ffcaa598000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.14.101-hotspot\bin\java.dll
+0x00007ffcb5c90000 - 0x00007ffcb5c9a000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.14.101-hotspot\bin\jimage.dll
+0x00007ffcaf7a0000 - 0x00007ffcaf7b8000 	C:\Program Files\Eclipse Adoptium\jdk-11.0.14.101-hotspot\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Eclipse Adoptium\jdk-11.0.14.101-hotspot\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Program Files\Eclipse Adoptium\jdk-11.0.14.101-hotspot\bin\server
+
+VM Arguments:
+jvm_args: --module-path=F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib --add-modules=javafx.controls,javafx.fxml -Dfile.encoding=Cp1252 --module-path=F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx.base.jar;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx.controls.jar;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx.fxml.jar;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx.graphics.jar;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx.media.jar;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx.swing.jar;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx.web.jar;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas\TP\programa\javafx-sdk-19\lib\javafx-swt.jar 
+java_command: Interfaz.Main
+java_class_path (initial): C:\Users\ferna\eclipse-workspace\TPDDS-main.zip_expanded\TPDDS-main\bin
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 10                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 268435456                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4282384384                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5836300                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122910970                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122910970                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Eclipse Adoptium\jdk-11.0.14.101-hotspot
+PATH=C:/Program Files/Eclipse Adoptium/jdk-11.0.14.101-hotspot/bin/server;C:/Program Files/Eclipse Adoptium/jdk-11.0.14.101-hotspot/bin;C:\Program Files\Eclipse Adoptium\jdk-11.0.14.101-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Users\ferna\AppData\Local\Microsoft\WindowsApps;;F:\Desktop\Ingeniería en sistemas\Diseño de sistemas;
+USERNAME=ferna
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 8 Stepping 2, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1889)
+OS uptime: 1 days 16:56 hours
+
+CPU:total 12 (initial active 12) (12 cores per cpu, 2 threads per core) family 23 model 8 stepping 2 microcode 0x0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, ht, tsc, tscinvbit, tscinv, bmi1, bmi2, adx, sha, fma
+
+Memory: 4k page, system-wide physical 16335M (6557M free)
+TotalPageFile size 30567M (AvailPageFile size 176M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 65M, peak: 320M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.14.1+1) for windows-amd64 JRE (11.0.14.1+1), built on Feb  9 2022 01:48:27 by "" with unknown MS VC++:1916
+
+END.
