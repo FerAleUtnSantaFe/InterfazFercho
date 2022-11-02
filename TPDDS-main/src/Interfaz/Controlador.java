@@ -228,8 +228,7 @@ public class Controlador implements Initializable{
 	
 	}
 	
-	// BOTÓN ACEPTAR, COMPRUEBA SI LOS TODOS LOS DATOS FUERON CARGADOS Y LOS GUARDA, EN EL CASO DE QUE NO HAYAN SIDO GUARDADO ACTIVA LOS LABELS DE ERROR
-	public void aceptar(ActionEvent event) {
+		public void aceptar(ActionEvent event) {
 		
 		// COMPRUEBA QUE CÓDIGO SEA DE TIPO NUM�RICO
 		try{
@@ -245,8 +244,8 @@ public class Controlador implements Initializable{
 		
 		// COMPRUEBA SI NO ESTÁN VACIOS Y ACTIVA LABEL DE ERROR EN CASO DE ESTARLO
 		if(comprobarDatos(codigo,puesto,empresa,descripcion)) {
-			/*
-			Alert alert = new Alert(AlertType.CONFIRMATION, "El puesto: "+puesto + " ha sido creado con correctamente. ¿Desea cargar otro?", ButtonType.YES, ButtonType.NO, ButtonType.CANCEL);
+			
+			Alert alert = new Alert(AlertType.NONE, "El puesto: "+puesto + " ha sido creado con correctamente. ¿Desea cargar otro?", ButtonType.YES, ButtonType.NO);
 			alert.showAndWait();
 
 			if (alert.getResult() == ButtonType.YES) {
@@ -258,19 +257,11 @@ public class Controlador implements Initializable{
 				Stage stage = (Stage) cancelarButton.getScene().getWindow();
 				stage.close();
 			}
-			*/
-			Stage dialogStage = new Stage();
-			dialogStage.initModality(Modality.WINDOW_MODAL);
-
-			VBox vbox = new VBox(new Text("El puesto: "+puesto + " ha sido creado con correctamente. ¿Desea cargar otro?"), new Button("Si"), new Button(""));
-			vbox.setAlignment(Pos.CENTER);
-			vbox.setPadding(new Insets(15));
-
-			dialogStage.setScene(new Scene(vbox));
-			dialogStage.show();
+		
+		}else {
 			
-			
-		}
+			}
+		
 	}
 	
 	// COMPRUEBA SI NO ESTÁN VACIOS Y ACTIVA LABEL DE ERROR EN CASO DE ESTARLO
