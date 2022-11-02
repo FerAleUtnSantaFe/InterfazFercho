@@ -273,11 +273,8 @@ public class Controlador implements Initializable{
 	// COMPRUEBA SI NO ESTÁN VACIOS Y ACTIVA LABEL DE ERROR EN CASO DE ESTARLO
 	private boolean comprobarDatos(int cod, String pto, String emp, String desc) {
 		
-		if (!actitudinalesCheckBox.isSelected() && !tecnicasCheckBox.isSelected()) tipoCompErrorLabel.setVisible(true);
-		else tipoCompErrorLabel.setVisible(false);
-		
 		if(cod != 0 && !pto.isEmpty() && !empresa.isEmpty() && !descripcion.isEmpty() && 
-				(!actitudinalesCheckBox.isSelected() && !tecnicasCheckBox.isSelected())) return true;
+				(actitudinalesCheckBox.isSelected() || tecnicasCheckBox.isSelected())) return true;
 		else {
 			if (codigo == 0) codigoErrorLabel.setVisible(true);
 			else codigoErrorLabel.setVisible(false);
@@ -290,6 +287,9 @@ public class Controlador implements Initializable{
 			
 			if (descripcion.isEmpty()) descripcionErrorLabel.setVisible(true);
 			else descripcionErrorLabel.setVisible(false);
+			
+			if (!actitudinalesCheckBox.isSelected() && !tecnicasCheckBox.isSelected()) tipoCompErrorLabel.setVisible(true);
+			else tipoCompErrorLabel.setVisible(false);
 		}
 		
 		return false;
