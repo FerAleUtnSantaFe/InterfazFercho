@@ -227,8 +227,8 @@ public class Controlador implements Initializable{
 		tabla.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
 	
 	}
-	
-		public void aceptar(ActionEvent event) {
+	// BOTÓN ACEPTAR, COMPRUEBA SI LOS TODOS LOS DATOS FUERON CARGADOS Y LOS GUARDA, EN EL CASO DE QUE NO HAYAN SIDO GUARDADO ACTIVA LOS LABELS DE ERROR
+	public void aceptar(ActionEvent event) {
 		
 		// COMPRUEBA QUE CÓDIGO SEA DE TIPO NUM�RICO
 		try{
@@ -252,7 +252,13 @@ public class Controlador implements Initializable{
 			    codigo = 0;
 			    puesto = "";
 			    empresa = "";
-			    descripcion = "";			    
+			    descripcion = "";
+			    codigoTextField.clear();
+			    puestoTextField.clear();
+			    empresaTextField.clear();
+			    descripcionTextArea.clear();
+			    tabla.getItems().clear();
+			    
 			}else {
 				Stage stage = (Stage) cancelarButton.getScene().getWindow();
 				stage.close();
