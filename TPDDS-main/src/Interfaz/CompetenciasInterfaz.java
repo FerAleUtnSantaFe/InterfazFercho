@@ -1,39 +1,74 @@
 package Interfaz;
 
-import javafx.beans.property.SimpleBooleanProperty;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleObjectProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.value.ObservableValue;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.CheckBoxTreeItem;
 
 public class CompetenciasInterfaz {
-	private SimpleStringProperty nombre;
-	private SimpleDoubleProperty puntuacion;
-	private SimpleBooleanProperty seleccionado = new SimpleBooleanProperty(false);
-	private CheckBox selCheckBox = new CheckBox();
+	private String nombreComp;
+	private Double puntComp;
+	private Boolean selComp;
+	private CheckBox checkSelComp = new CheckBox();
+	private Double puntDeseada;
+	
+
+
+	public CompetenciasInterfaz(){
+		this.nombreComp = "";
+		this.puntComp = 0.0;
+		this.puntDeseada = 0.0;
+		this.selComp = false;
+		this.checkSelComp.setSelected(false);
+	}
 	
 	public CompetenciasInterfaz(String nom, Double punt, Boolean sel) {
-		this.setNombre(nom);
-		this.setPuntuacion(punt);
-		this.setSeleccionado(sel);
+		this.nombreComp = nom;
+		this.puntComp = punt;
+		this.selComp = sel;
+		this.checkSelComp.setSelected(sel);
+	}
+
+	public String getNombreComp() {
+		return nombreComp;
+	}
+
+	public void setNombreComp(String nombreComp) {
+		this.nombreComp = nombreComp;
+	}
+
+	public Double getPuntComp() {
+		return puntComp;
+	}
+
+	public void setPuntComp(Double puntComp) {
+		this.puntComp = puntComp;
+	}
+
+	public Boolean getSelComp() {
+		return selComp;
+	}
+
+	public void setSelComp(Boolean selComp) {
+		this.selComp = selComp;
+		this.setCheckSelComp(selComp);
+	}
+
+	public CheckBox getCheckSelComp() {
+		return checkSelComp;
+	}
+
+	public void setCheckSelComp(Boolean checkSelComp) {
+		this.checkSelComp.setSelected(checkSelComp);
 	}
 	
-	public void setNombre(String nom) { this.nombre = new SimpleStringProperty(nom); }
-	public SimpleStringProperty getNombre() { return this.nombre; }
-	
-	public void setPuntuacion(Double punt) { this.puntuacion = new SimpleDoubleProperty(punt); }
-	public SimpleDoubleProperty getPuntuacion() { return this.puntuacion; }
-	
-	public void setSeleccionado(Boolean sel) { 
-		 this.seleccionado = new SimpleBooleanProperty(sel);
-		 this.selCheckBox.setSelected(sel);
+	public void setCheckSelComp(CheckBox checkSelComp) {
+		this.checkSelComp = checkSelComp;
 	}
 	
-	public Boolean getSeleccionado() { return this.seleccionado.getValue(); }
-	
-	public ObservableValue<CheckBox> getCheckBox() { return (ObservableValue<CheckBox>) this.selCheckBox; }
-	
+	public Double getPuntDeseada() {
+		return puntDeseada;
+	}
+
+	public void setPuntDeseada(Double puntDeseada) {
+		this.puntDeseada = puntDeseada;
+	}
 	
 }

@@ -1,13 +1,12 @@
 package Interfaz;
 	
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.paint.Color;
+import javafx.scene.layout.AnchorPane;
 
 
 public class Main extends Application {
@@ -15,13 +14,13 @@ public class Main extends Application {
 	public void start(Stage stage) throws Exception{
 
 		try {
-			
-			Parent root = FXMLLoader.load(getClass().getResource("MainSB.fxml"));
+			AnchorPane root = FXMLLoader.load(getClass().getResource("MainSB.fxml"));
 			Scene scene = new Scene(root);
 			stage.setTitle("Capit@l humano - Nuevo Puesto");
 			//stage.setResizable(false);
 			//stage.setFullScreen(true);
 			stage.setScene(scene);
+			
 			stage.show();
 
 		} catch (Exception e) {
